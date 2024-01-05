@@ -1,0 +1,21 @@
+﻿<div class="subscriber-area">
+
+    @if (Current.Avatar != null)
+    {
+        <img class="icon" src="@Current.Avatar" />
+    }
+    else
+    {
+        <div class="icon">
+            <p>@Current.Name[0]</p>
+        </div>
+    }
+
+    <p>@Current.Name</p>
+</div>
+
+@code {
+
+    [Parameter]
+    public SubscriberModel Current { get; set; }
+}

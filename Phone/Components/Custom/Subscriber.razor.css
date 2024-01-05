@@ -1,0 +1,24 @@
+.subscriber-area {
+  display: flex;
+  margin-bottom: 20px;
+}
+.subscriber-area .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: #AF5CF6;
+  display: flex;
+}
+.subscriber-area .icon p {
+  margin: auto;
+  color: #ffffff;
+  font-size: 30px;
+}
+.subscriber-area p {
+  margin: auto;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #2C2C2C;
+}
+
+/*# sourceMappingURL=Subscriber.razor.css.map */

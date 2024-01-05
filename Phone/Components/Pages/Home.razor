@@ -1,0 +1,52 @@
+﻿@page "/"
+
+
+<div class="main">
+    <div class="search-area">
+        <Search></Search>
+    </div>
+    <div class="contacts-area">
+        <div class="add-contact">
+            <i class="fa-solid fa-user-plus"></i>
+            <p>Додати контакт</p>
+        </div>
+        <div class="sorted-contacts">
+            <div class="letter-area">
+                <p>A</p>
+            </div>
+            <div class="contacts">
+                @foreach (var subscriber in Subscribers)
+                {
+                    <Subscriber Current="subscriber"></Subscriber>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="menu-area">
+        <div class="menu-button">
+            <i class="fa-regular fa-star"></i>
+            <p>Останні</p>
+        </div>
+        <div class="menu-button">
+            <i class="fa-regular fa-clock"></i>
+            <p>Останні</p>
+        </div>
+        <div class="menu-button">
+            <i class="fa-solid fa-user-group"></i>
+            <p>Контакти</p>
+        </div>
+    </div>
+    <div class="button-number">
+        <i class="fa-solid fa-grip-vertical"></i>
+    </div>
+</div>
+
+@code
+{
+    public List<SubscriberModel> Subscribers { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Subscribers = DatabaseMoq.Subscribers;
+    }
+}
